@@ -41,7 +41,7 @@ We analyzed GRPO and its variants (Dr. GRPO, DAPO, etc) under a binary reward se
     - [Datasets](#datasets)
     - [Training](#training)
     - [Evaluation](#evaluation)
-- [Citing DisCO](#citing-disco)
+- [Citing GIVE](#citing-give)
 
 ## Getting Started
 ### Installation
