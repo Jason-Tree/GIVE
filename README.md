@@ -115,21 +115,18 @@ We report Pass@1 accuracy averaged over 16 samples for each problem. To replicat
 ./scripts/eval/eval_model.sh --model ganglii/DisCO-1.5B-logL --datasets aime aime25 math amc minerva olympiad_bench --output-dir ./val_results/DisCO-1.5B-logL
 ```
 
-## Acknowledgements
-- Our training pipeline is built on the Github repository [deepscaler](https://github.com/agentica-project/rllm). We thank the authors for open-sourcing their code.
 
+## Citing GIVE
 
-
-
-
-## Citing DisCO
-
-If you find DisCO useful in your research, please consider citing the following paper:
+If you find the data or code in this repo useful in your research, please consider citing our paper:
 ```bibtex
-@article{li2025disco,
-  title={DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization},
-  author={Li, Gang and Lin, Ming and Galanti, Tomer and Tu, Zhengzhong and Yang, Tianbao},
-  journal={arXiv preprint arXiv:2505.12366},
-  year={2025}
+@article{he2025givestructuredreasoninglarge,
+      title={GIVE: Structured Reasoning of Large Language Models with Knowledge Graph Inspired Veracity Extrapolation}, 
+      author={Jiashu He and Mingyu Derek Ma and Jinxuan Fan and Dan Roth and Wei Wang and Alejandro Ribeiro},
+      year={2025},
+      eprint={2410.08475},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2410.08475}, 
 }
 ```
