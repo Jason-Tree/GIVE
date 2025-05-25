@@ -4,23 +4,15 @@ with Knowledge-Graph-Inspired Veracity Extrapolation</h1>
 Paper link: [arXiv](https://arxiv.org/abs/2410.08475)
 
 
-The success of **DeepSeek-R1** has spotlighted **GRPO (Group Relative Policy Optimization)** as a key reinforcement learning method for large reasoning models.
-However, GRPO suffers several key limitations including entropy collapse, difficulty bias, etc. 
+Large Language Models stumble on complex-domain questions because of lacking domain-specific internal knowledge. Textual or Knowledge Graph base RAG approaches assume the comprehensiveness of the accssible non-parametric knowledge base, which is costly or not feasible in scientific domains.
 
-*How can we design more effective optimization methods for reinforcing large reasoning models
-in a principled manner without inheriting the limitations of GRPO?*
-
-
-We analyzed GRPO and its variants (Dr. GRPO, DAPO, etc) under a binary reward setting and uncovered two core insights:
-
-* ⚠️ GRPO suffers from **question-level difficulty bias** for its discriminative objective
-* 🔍 GRPO has a surprising connection to **discriminative learning** techniques, particularly AUC maximization
+*How can we combine the parametric knowledge and limited non-parametric information to boost human-like reasoning?*
 
 ---
 
-### 💡 Introducing **DisCO** — *Discriminative Constrained Optimization*
+### Introducing **GIVE** — *Graph Inspired Veracity Extrapolation*
 
-**DisCO** is a new RL framework grounded in **discriminative learning**. It trains models by **increasing scores for positive answers while decreasing those for negatives**, enabling:
+**GIVE** is a new RL framework grounded in **discriminative learning**. It trains models by **increasing scores for positive answers while decreasing those for negatives**, enabling:
 
 * ⚡ Faster convergence
 * 🔒 More stable optimization
