@@ -1,4 +1,4 @@
-<h1 align="center">🔍 🧠 GIVE: Structured Reasoning of Large Language Models
+<h1 align="center">🔍 💡 GIVE: Structured Reasoning of Large Language Models
 with Knowledge-Graph-Inspired Veracity Extrapolation</h1>
 
 Paper link: [arXiv](https://arxiv.org/abs/2410.08475)
