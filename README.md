@@ -4,7 +4,7 @@ with Knowledge-Graph-Inspired Veracity Extrapolation</h1>
 Paper link: [arXiv](https://arxiv.org/abs/2410.08475)
 
 
-Large Language Models stumble on complex-domain questions because of lacking domain-specific internal knowledge. Textual or Knowledge Graph base RAG approaches assume the comprehensiveness of the accssible non-parametric knowledge base, which is costly or not feasible in scientific domains.
+Large Language Models stumble on complex-domain questions because of lacking domain-specific internal knowledge. Textual or Knowledge Graph based RAG approaches assume the comprehensiveness of the accssible non-parametric knowledge base, which is costly or not feasible in scientific domains.
 
 *How can we combine the parametric knowledge and limited non-parametric information to boost human-like reasoning?*
 
@@ -29,30 +29,11 @@ Large Language Models stumble on complex-domain questions because of lacking dom
 
 ---
 - [Getting Started](#getting-started)
-    - [Installation](#installation)
-    - [Datasets](#datasets)
     - [Training](#training)
     - [Evaluation](#evaluation)
 - [Citing GIVE](#citing-give)
 
 ## Getting Started
-### Installation
-```bash
-# Recommend Python 3.10.
-conda create -n disco python=3.10
-conda activate disco
-cd DisCO
-pip install -e ./verl
-pip install -e ./deepscaler
-pip install wandb
-```
-
-### Datasets
-
-Datesets utilized in our training are included in the `datasets` folder. Feel free to adapt  file `scripts/data/deepscaler_dataset.py` to generate your own datasets.
-
-
-
 ### Training
 
 We provide training scripts for both single-node and multi-node setups in `scripts/train/`.
