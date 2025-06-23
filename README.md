@@ -4,37 +4,30 @@ with Knowledge-Graph-Inspired Veracity Extrapolation</h1>
 Paper link: [arXiv](https://arxiv.org/abs/2410.08475)
 
 
-Large Language Models stumble on complex-domain questions because of lacking domain-specific internal knowledge. Textual or Knowledge Graph based RAG approaches assume the comprehensiveness of the accssible non-parametric knowledge base, which is costly or not feasible in scientific domains.
+Large Language Models stumble on complex-domain questions because of lacking domain-specific internal knowledge. Textual or Knowledge Graph based RAG approaches assume the comprehensiveness of the accssible non-parametric knowledge base, which is costly or not feasible to maintain in scientific domains.
 
-*How can we combine the parametric knowledge and limited non-parametric information to boost human-like reasoning?*
+*Can we combine the parametric knowledge and limited non-parametric information to boost human-like associative reasoning?*
 
 ---
 
 ### Introducing **GIVE** — *Graph Inspired Veracity Extrapolation*
 
-**GIVE** is a new RL framework grounded in **discriminative learning**. It trains models by **increasing scores for positive answers while decreasing those for negatives**, enabling:
-
-* ⚡ Faster convergence
-* 🔒 More stable optimization
-* 🔁 Long-lasting training dynamics
+**GIVE** is a retreival and reasoning framework utilizing the structured information in **knowledge graphs**. We argue that in the era of large reasoning models, we need agentic frameworks that go beyond gold context retrieval and self-reflection style reasoning, the problem of **retrieval** and **reasoning** should be unified to advance automatic problem-solving in the hard domain. 
 
 ---
 
 ### 🔍 Why DisCO?
 
-* ❌ **No more difficulty bias** – replaces group-relative objective with discriminative objectives
-* 🔄 **No clipping operations** – uses non-clipping scoring functions (e.g., log-likelihood, likelihood ratio) for smoother learning
-* 📉 **Stable training** – via simple constrained optimization to keep KL divergence in check
-* ⚖️ **Handles sparse rewards** – robust to imbalanced data with advanced discriminative approaches
+* ⚖️ **Handles both comprehensive and small KG** – replaces group-relative objective with discriminative objectives
+* 🔄 **Interpretable associative reasoning** – uses non-clipping scoring functions (e.g., log-likelihood, likelihood ratio) for smoother learning
+* 📉 **Designed for hard domain QA that is beyond the training knowledge** – via simple constrained optimization to keep KL divergence in check
 
 ---
-- [Getting Started](#getting-started)
-    - [Training](#training)
-    - [Evaluation](#evaluation)
+- [Inference](#inference)
+- [Evaluation](#evaluation)
 - [Citing GIVE](#citing-give)
 
-## Getting Started
-### Training
+### Inference
 
 We provide training scripts for both single-node and multi-node setups in `scripts/train/`.
 
