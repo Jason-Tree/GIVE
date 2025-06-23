@@ -32,8 +32,6 @@ We provide all KG and QA datasets in the `data.zip` file at [Link to Google Driv
 
 #### PubmedQA/BioASQ/ProcessBank on a small UMLS KG
 
-PubmedQA:
-
 To run the defult setting:
 ```bash
 python GIVE_pubmedqa.py --openai_api_key [YOUR_OPENAI_API_KEY]
@@ -44,7 +42,7 @@ To try different parameters for best performance:
 python GIVE_pubmedqa.py --openai_api_key [YOUR_OPENAI_API_KEY] --model_id [OPENAI_MODEL_ID] --sentence_transformer [ENCODER_SENTENCE_TRANSFORMER] --temperature [LLM_OUTPUT_TEMPERATURE] --rewrite_question [WHETHER_PARAPHRASE_QUESTION_STATEMENT] --entity_per_group [NO._KG_ENTITIES_PER_GROUP]
 ```
 
-To run BioASQ/ProcessBank, simply replace GIVE_pubmedqa.py with GIVE_bioasq.py or GIVE_processbank.py.
+The above commands are for PubmedQA, to run BioASQ/ProcessBank, simply replace GIVE_pubmedqa.py with GIVE_bioasq.py or GIVE_processbank.py.
 
 
 ## Evaluation
