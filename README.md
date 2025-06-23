@@ -28,7 +28,7 @@ Large Language Models stumble on complex-domain questions because of lacking dom
 
 ### Inference
 
-We provide all KG and QA datasets in `data.zip`, unzip this file before running.
+We provide all KG and QA datasets in `data.zip` at `https://drive.google.com/drive/folders/1YaekQcYsagnmyn1dh-s605cgqb3L4f4L?usp=drive_link`, unzip this file before running.
 
 #### Single-Node Training (8 GPUs)
 We start with one node for training 1.5b Qwen models with 8k context, with 8 A100-80GB GPUs. For example, let's run DisCO algorithm with `log likelihood` as the score function:
