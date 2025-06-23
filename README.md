@@ -16,12 +16,11 @@ Large Language Models stumble on complex-domain questions because of lacking dom
 
 ---
 
-### 🔍 Why DisCO?
+### 🔍 Why GIVE?
 
-* ⚖️ **Handles both comprehensive and small KG** – replaces group-relative objective with discriminative objectives
-* 🔄 **Interpretable associative reasoning** – uses non-clipping scoring functions (e.g., log-likelihood, likelihood ratio) for smoother learning
-* 📉 **Designed for hard domain QA that is beyond the training knowledge** – via simple constrained optimization to keep KL divergence in check
-
+* ⚖️ **Handles both comprehensive and small KG** – extrapolate and populate the limited KG information
+* 🔄 **Interpretable associative reasoning** – associate the structured knowledge with the important queried concepts and relations
+* 📉 **Designed for hard domain QA that is beyond the training knowledge** – via "GIVE"ing hints to the agent for problem solving, rather than gold context retrieval
 ---
 - [Inference](#inference)
 - [Evaluation](#evaluation)
@@ -29,7 +28,7 @@ Large Language Models stumble on complex-domain questions because of lacking dom
 
 ### Inference
 
-We provide training scripts for both single-node and multi-node setups in `scripts/train/`.
+We provide all data in `data.zip`, unzip this file before running.
 
 #### Single-Node Training (8 GPUs)
 We start with one node for training 1.5b Qwen models with 8k context, with 8 A100-80GB GPUs. For example, let's run DisCO algorithm with `log likelihood` as the score function:
