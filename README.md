@@ -28,41 +28,15 @@ Large Language Models stumble on complex-domain questions because of lacking dom
 
 ### Inference
 
-We provide all KG and QA datasets in `data.zip` at [Google Drive](https://drive.google.com/file/d/1fxDXOY-bsTL29aIM-8IRR8EL2h8S0cu7/view?usp=sharing), unzip this file before running.
+We provide all KG and QA datasets in the `data.zip` file at [Link to Google Drive](https://drive.google.com/file/d/1fxDXOY-bsTL29aIM-8IRR8EL2h8S0cu7/view?usp=sharing), download unzip this file before running.
 
-#### Single-Node Training (8 GPUs)
-We start with one node for training 1.5b Qwen models with 8k context, with 8 A100-80GB GPUs. For example, let's run DisCO algorithm with `log likelihood` as the score function:
+#### Dependencies
+
+#### Run PubmedQA/BioASQ/ProcessBank on a small UMLS KG
+
+PubmedQA:
 ```bash
-
-bash ./scripts/train/run_disco_logL_1.5b_8k.sh   #### DisCO with `log likelihood`
-# bash ./scripts/train/run_disco_Lratio_1.5b_8k.sh   #### DisCO with `likelihood ratio`
-# bash ./scripts/train/run_discob_logL_1.5b_8k.sh    #### DisCO-b with `log likelihood`
-# bash ./scripts/train/run_discob_Lratio_1.5b_8k.sh  #### DisCO-b with `likelihood ratio`
-```
-
-#### Multi-Node Training
-
-To train with longer context or larger models, multi-node training is necessary. To achieve this, follow these steps:
-
-1. On the head node:
-```bash
-# Set XFormers backend to avoid CUDA errors
-export VLLM_ATTENTION_BACKEND=XFORMERS
-# Start Ray head node
-ray start --head
-```
-
-2. On each worker node:
-```bash
-# Set XFormers backend to avoid CUDA errors
-export VLLM_ATTENTION_BACKEND=XFORMERS
-# Connect to head node (replace with your head node's address)
-ray start --address=[RAY_ADDRESS]
-```
-
-3. Finally, on the head node, run the training script, such as:
-```bash
-bash ./scripts/train/run_disco_logL_7b_8k.sh
+python GIVE_pubmedqa.py --openai_api_key [YOUR_OPENAI_API_KEY] --model_id [OPENAI_MODEL_ID] --sentence_transformer [ENCODER_SENTENCE_TRANSFORMER] --temperature [LLM_OUTPUT_TEMPERATURE] --rewrite_question [WHETHER_PARAPHRASE_QUESTION_STATEMENT] --entity_per_group [NO._KG_ENTITIES_PER_GROUP]
 ```
 
 
