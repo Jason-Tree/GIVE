@@ -30,9 +30,7 @@ Large Language Models stumble on complex-domain questions because of lacking dom
 
 We provide all KG and QA datasets in the `data.zip` file at [Link to Google Drive](https://drive.google.com/file/d/1fxDXOY-bsTL29aIM-8IRR8EL2h8S0cu7/view?usp=sharing), download unzip this file before running.
 
-#### Dependencies
-
-#### Run PubmedQA/BioASQ/ProcessBank on a small UMLS KG
+#### PubmedQA/BioASQ/ProcessBank on a small UMLS KG
 
 PubmedQA:
 
@@ -46,20 +44,11 @@ To try different parameters for best performance:
 python GIVE_pubmedqa.py --openai_api_key [YOUR_OPENAI_API_KEY] --model_id [OPENAI_MODEL_ID] --sentence_transformer [ENCODER_SENTENCE_TRANSFORMER] --temperature [LLM_OUTPUT_TEMPERATURE] --rewrite_question [WHETHER_PARAPHRASE_QUESTION_STATEMENT] --entity_per_group [NO._KG_ENTITIES_PER_GROUP]
 ```
 
+To run BioASQ/ProcessBank, simply replace GIVE_pubmedqa.py with GIVE_bioasq.py or GIVE_processbank.py.
+
 
 ## Evaluation
 
-Our evaluation scripts automatically runs vLLM to generate 16 samples for each problem. To run our evaluation scripts, run:
-```bash
-./scripts/eval/eval_model.sh --model [CHECKPOINT_PATH] --datasets [DATASET1] [DATASET2] --output-dir [OUTPUT_DIR]
-```
-
-We report Pass@1 accuracy averaged over 16 samples for each problem. To replicate our reported numbers, for example, run:
-<!-- Notably, our `DeepScaleR-1.5B-Preview` surpasses many open-source 7B models!  -->
-
-```bash
-./scripts/eval/eval_model.sh --model ganglii/DisCO-1.5B-logL --datasets aime aime25 math amc minerva olympiad_bench --output-dir ./val_results/DisCO-1.5B-logL
-```
 
 
 ## Citing GIVE
