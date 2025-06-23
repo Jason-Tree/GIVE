@@ -26,7 +26,7 @@ Large Language Models stumble on complex-domain questions because of lacking dom
 - [Evaluation](#evaluation)
 - [Citing GIVE](#citing-give)
 
-### Inference
+## Inference
 
 We provide all KG and QA datasets in the `data.zip` file at [Link to Google Drive](https://drive.google.com/file/d/1fxDXOY-bsTL29aIM-8IRR8EL2h8S0cu7/view?usp=sharing), download unzip this file before running.
 
@@ -35,6 +35,13 @@ We provide all KG and QA datasets in the `data.zip` file at [Link to Google Driv
 #### Run PubmedQA/BioASQ/ProcessBank on a small UMLS KG
 
 PubmedQA:
+
+To run the defult setting:
+```bash
+python GIVE_pubmedqa.py
+```
+
+To try different parameters for best performance:
 ```bash
 python GIVE_pubmedqa.py --openai_api_key [YOUR_OPENAI_API_KEY] --model_id [OPENAI_MODEL_ID] --sentence_transformer [ENCODER_SENTENCE_TRANSFORMER] --temperature [LLM_OUTPUT_TEMPERATURE] --rewrite_question [WHETHER_PARAPHRASE_QUESTION_STATEMENT] --entity_per_group [NO._KG_ENTITIES_PER_GROUP]
 ```
