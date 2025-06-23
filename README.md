@@ -36,7 +36,7 @@ PubmedQA:
 
 To run the defult setting:
 ```bash
-python GIVE_pubmedqa.py
+python GIVE_pubmedqa.py --openai_api_key [YOUR_OPENAI_API_KEY]
 ```
 
 To try different parameters for best performance:
