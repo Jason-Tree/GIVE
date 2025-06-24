@@ -2,9 +2,9 @@ from GIVE_functions import *
 from sklearn.metrics import accuracy_score
 def parse_args():
     parser = argparse.ArgumentParser(description="Evaluate for short-answer tasks")
-    parser.add_argument('--dataset', type=str, default="csqa",
+    parser.add_argument('--dataset', type=str, default="pubmedqa",
                         help='Choose from {pubmedqa,bioasq,processbank,csqa}')
-    parser.add_argument('--path', type=str, default = "/home/jason/KG_LLM/results/commonsenseQA0.1/answer_third_3.5T_up_to_1220.json",
+    parser.add_argument('--path', type=str, default = "GIVE_pubmedqa_a.json",
                         help='Please provide the path to the result json file')
     return parser.parse_args()
 
