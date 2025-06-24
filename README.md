@@ -47,7 +47,7 @@ The above commands are for PubmedQA, to run BioASQ/ProcessBank, simply replace G
 
 ## Evaluation
 
-
+The inference code will generate three .json files containing the QA results: GIVE_\[DATASET\]_a.json, GIVE_\[DATASET\]_a+c.json, GIVE_\[DATASET\]_a+c+e.json
 
 ## Citing GIVE
 
