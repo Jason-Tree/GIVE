@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     elif(dataset == "csqa"):
         keys, ids, concepts, choices, questions = load_commonsenseqa()
-        answers = json.load(open("/home/jason/mq/KG_4o_tog/ToG3.5T_0.1_up_to1221.json"))
+        answers = json.load(open(args.path))
         c = 0
         for key in list((answers.keys())):
             a = answers[key]
