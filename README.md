@@ -22,13 +22,22 @@ Large Language Models stumble on complex-domain questions because of lacking dom
 * 🔄 **Interpretable associative reasoning** – associate the structured knowledge with the important queried concepts and relations
 * 📉 **Designed for hard domain QA that is beyond the training knowledge** – via "GIVE"ing hints to the agent for problem solving, rather than gold context retrieval
 ---
+- [Setup](#setup)
 - [Inference](#inference)
 - [Evaluation](#evaluation)
 - [Citing GIVE](#citing-give)
 
+## Setup
+```bash
+conda create -n GIVE python=3.11
+conda activate GIVE
+pip install -r requirements.txt
+```
+
+
 ## Inference
 
-We provide all KG and QA datasets in the `data.zip` file at [Link to Google Drive](https://drive.google.com/file/d/1fxDXOY-bsTL29aIM-8IRR8EL2h8S0cu7/view?usp=sharing), download unzip this file before running.
+We provide all KG and QA datasets in the `data.zip` file at [Link to Google Drive](https://drive.google.com/file/d/1fxDXOY-bsTL29aIM-8IRR8EL2h8S0cu7/view?usp=sharing), download and unzip this file before running.
 
 #### PubmedQA/BioASQ/ProcessBank on a small UMLS KG
 
